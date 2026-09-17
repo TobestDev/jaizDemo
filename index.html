@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Jaiz Bank Intranet - Digital workplace for news, services, people and productivity.">
+  <title>Intranet Dashboard | Jaiz Bank</title>
+
+  <!-- Favicon (Jaiz Bank Leaf) -->
+  <link rel="icon" type="image/svg+xml" href="https://jaizbankplc.com/_next/image?url=http%3A%2F%2Fstrapi%3A1338%2Fuploads%2Fleaf_237fd3c500.svg&w=640&q=75">
+  <link rel="apple-touch-icon" href="https://jaizbankplc.com/_next/image?url=http%3A%2F%2Fstrapi%3A1338%2Fuploads%2Fleaf_237fd3c500.svg&w=640&q=75">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="#" class="brand">
+        <img
+          src="https://jaizbankplc.com/_next/image?url=http%3A%2F%2Fstrapi%3A1338%2Fuploads%2Fleaf_237fd3c500.svg&w=640&q=75"
+          alt="Jaiz Bank"
+          class="brand-logo"
+        />
+        <span class="brand-name">Jaiz Bank Intranet</span>
+      </a>
+      <nav class="nav-links">
+        <!-- Nav items are dynamically rendered by JavaScript -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== SUB NAVIGATION ==================== -->
+  <div class="subnav">
+    <div class="subnav-left">
+      <a href="#"><i class="fa-regular fa-file-lines"></i> Page details</a>
+      <a href="#"><i class="fa-regular fa-eye"></i> Preview</a>
+      <a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a>
+    </div>
+    <div class="subnav-right">
+      <span class="publish-date">Published on 9/14/2026</span>
+      <button class="btn-share"><i class="fa-solid fa-share-nodes"></i> Share</button>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main-container">
+
+    <!-- ===== HERO CARD ===== -->
+    <section class="hero-card">
+      <div class="hero-left">
+        <p class="greeting">Assalamu Alaikum</p>
+        <h1 class="hero-title">Welcome to<br><span class="title-bold">Jaiz Bank Intranet</span></h1>
+        <p class="hero-subtitle">Your digital workplace for news, services, people and productivity.</p>
+        <p class="hero-datetime" id="datetime">Wednesday • 16 Sep 2026 • 4:32 PM</p>
+
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search news, policies, documents, knowledge, events and kudos...">
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="carousel-container">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop" alt="Featured Content">
+          <div class="carousel-badge">1/3</div>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APP LAUNCHER GRID ===== -->
+    <section class="app-section">
+      <div class="app-grid" id="appGrid"></div>
+
+      <div class="view-all-wrapper">
+        <button class="btn-view-all" id="openModalBtn">
+          View all Apps <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== ANNOUNCEMENT TICKER ==================== -->
+    <section class="announcement-ticker">
+      <span class="ticker-label">Announcement</span>
+      <div class="ticker-content">
+        <i class="fa-solid fa-bullhorn ticker-icon"></i>
+        <p>We're Evolving! New features and improvements will be rolled out regularly — this is just the beginning.</p>
+        <a href="#" class="ticker-link">Q1 2026 BPR Notification – April 9th 2026 <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- ==================== TWO-COLUMN LAYOUT: MAIN + SIDEBAR ==================== -->
+    <div class="layout-wrapper">
+
+      <!-- ============ LEFT COLUMN: Main Content ============ -->
+      <div class="main-column">
+
+        <!-- DIVISIONS CAROUSEL -->
+        <section class="divisions-section">
+          <div class="section-header-simple">
+            <h2 class="section-title-simple">DIVISIONS</h2>
+          </div>
+          <div class="divisions-carousel">
+            <button class="carousel-nav prev" id="divisionsPrev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="divisions-track" id="divisionsTrack">
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">SME Lagos Island 2</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">Food And Beverages</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">Public Sector Lagos</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">SME Abuja</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">Business Banking Lagos Mainland</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">South West</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">South South</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">South East</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">North West</span>
+              </a>
+              <a href="#" class="division-item">
+                <div class="division-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <span class="division-name">North East &amp; Public Sector</span>
+              </a>
+            </div>
+            <button class="carousel-nav next" id="divisionsNext">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="carousel-pagination">
+            <span class="page-dot active"></span>
+            <span class="page-dot"></span>
+            <span class="page-dot"></span>
+          </div>
+        </section>
+
+        <!-- LATEST NEWS + POSTINGS -->
+        <section class="latest-news-section">
+          <div class="section-header-simple">
+            <h2 class="section-title-simple">LATEST NEWS</h2>
+            <a href="#" class="more-link">More News <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="latest-news-grid">
+            <div class="news-featured-item">
+              <h3 class="news-featured-title">MCC Schedule - September 17, 2026</h3>
+              <p class="news-featured-sub">MCC Schedule - September 17, 2026</p>
+              <button class="btn-read-more">Read more</button>
+            </div>
+
+            <div class="postings-list">
+              <a href="#" class="posting-item">
+                <h4 class="posting-title">WMS/Finacle Self Unlock Guide</h4>
+                <span class="posting-date">Sep 16, 2026</span>
+              </a>
+              <a href="#" class="posting-item posting-highlight">
+                <h4 class="posting-title">NEW POSTINGS</h4>
+                <span class="posting-date">Sep 17, 2026</span>
+              </a>
+              <a href="#" class="posting-item">
+                <h4 class="posting-title">Action Required - Staff Guide &amp; FAQ for DPRP IPO Subscription</h4>
+                <span class="posting-date">Sep 17, 2026</span>
+              </a>
+              <a href="#" class="posting-item">
+                <h4 class="posting-title">Fraud Alert! Be Like Eechukwu</h4>
+                <span class="posting-date">Jan 1, 1970</span>
+              </a>
+              <a href="#" class="posting-item">
+                <h4 class="posting-title">Wellness Wednesday - Annual Checkup Series: Pressure Checked, Health</h4>
+                <span class="posting-date">Sep 16, 2026</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHISTLE BLOWER + BIRTHDAYS -->
+        <section class="bottom-widgets-grid">
+          <div class="widget-card whistle-blower">
+            <div class="widget-header-simple">
+              <h3>WHISTLE BLOWER</h3>
+            </div>
+            <div class="widget-body-simple">
+              <p><i class="fa-solid fa-hand-holding-heart"></i> Be courageous to speak the truth to power, stand up for integrity, and expose injustice for the greater good.</p>
+              <button class="btn-orange-small">Get started</button>
+            </div>
+          </div>
+
+          <div class="widget-card birthdays">
+            <div class="widget-header-simple">
+              <h3>BIRTHDAYS 🎉</h3>
+              <a href="#" class="widget-link">Celebrants of the Month</a>
+            </div>
+            <div class="widget-body-birthdays">
+              <button class="btn-orange-small">Wish them well</button>
+              <div class="birthday-pagination">
+                <span class="page-dot active"></span>
+                <span class="page-dot"></span>
+                <span class="page-dot"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIDEO GALLERY -->
+        <section class="video-section">
+          <div class="video-row">
+            <div class="video-thumb" style="background:linear-gradient(135deg,#002f5e,#0a4d8c);">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="video-thumb" style="background:linear-gradient(135deg,#7c2d12,#ea580c);">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="video-thumb" style="background:linear-gradient(135deg,#065f46,#10b981);">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="video-thumb" style="background:linear-gradient(135deg,#7e22ce,#a855f7);">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="video-thumb" style="background:linear-gradient(135deg,#aad5ff,#d1c323);">
+              <i class="fa-solid fa-play" style="color:#002f5e;"></i>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ============ RIGHT COLUMN: Sidebar ============ -->
+      <aside class="sidebar-column">
+
+        <!-- APPS BOX -->
+        <div class="sidebar-card apps-box">
+          <div class="sidebar-card-header">
+            <h3>APPS</h3>
+            <a href="#" id="openModalBtnSidebar"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="sidebar-apps-grid" id="sidebarAppsGrid"></div>
+        </div>
+
+        <!-- QUICK LINKS BOX (DARK) -->
+        <div class="sidebar-card quick-links-box">
+          <div class="sidebar-card-header">
+            <h3>QUICK LINKS</h3>
+          </div>
+          <div class="quick-links-list">
+            <a href="#">Bankwide Applications</a>
+            <a href="#">HR Portal</a>
+            <a href="#">Document Repository</a>
+            <a href="#">Meeting Room Booking</a>
+            <a href="#">Information Security Division</a>
+            <a href="#">Shariah Compliance Portal</a>
+            <a href="#">Useful Links</a>
+            <a href="#">Jaiz eSOP</a>
+            <a href="#">Document Checklists</a>
+            <a href="#">Whistle Blowing Portal</a>
+            <a href="#">Marketing Call Memo</a>
+            <a href="#">Product Repository</a>
+          </div>
+        </div>
+
+        <!-- CORPORATE CALENDAR -->
+        <div class="sidebar-card calendar-box">
+          <div class="sidebar-card-header">
+            <h3>Corporate Calendar</h3>
+          </div>
+          <div class="calendar-header">
+            <span class="calendar-month">2026/9</span>
+            <div class="calendar-nav">
+              <button><i class="fa-solid fa-chevron-left"></i></button>
+              <button><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-head">Su</div><div class="cal-head">Mo</div><div class="cal-head">Tu</div>
+            <div class="cal-head">We</div><div class="cal-head">Th</div><div class="cal-head">Fr</div>
+            <div class="cal-head">Sa</div>
+
+            <div class="cal-day muted">30</div><div class="cal-day muted">31</div>
+            <div class="cal-day">1</div><div class="cal-day">2</div><div class="cal-day">3</div>
+            <div class="cal-day">4</div><div class="cal-day">5</div>
+
+            <div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div>
+            <div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div>
+            <div class="cal-day">12</div>
+
+            <div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div>
+            <div class="cal-day">16</div><div class="cal-day today">17</div><div class="cal-day">18</div>
+            <div class="cal-day">19</div>
+
+            <div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div>
+            <div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div>
+            <div class="cal-day">26</div>
+
+            <div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div>
+            <div class="cal-day">30</div><div class="cal-day muted">1</div>
+            <div class="cal-day muted">2</div><div class="cal-day muted">3</div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- ==================== PERSONAL WORKSPACE SECTION ==================== -->
+    <section class="workspace-section">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">PERSONAL WORKSPACE</p>
+          <h2 class="section-title">Your Daily Overview</h2>
+          <p class="section-subtitle">Everything you need to stay on top of your day</p>
+        </div>
+        <button class="btn-secondary-outline">
+          Customize <i class="fa-solid fa-sliders"></i>
+        </button>
+      </div>
+
+      <div class="workspace-grid">
+        <div class="workspace-card">
+          <div class="workspace-card-header">
+            <div class="workspace-icon" style="background:#3B82F620; color:#3B82F6;">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <span class="workspace-badge">8 pending</span>
+          </div>
+          <h3>My Tasks</h3>
+          <p>Tasks assigned to you across all systems</p>
+          <ul class="workspace-list">
+            <li>
+              <span class="task-dot" style="background:#EF4444;"></span>
+              <span>Murabaha approval – Aisha Bello</span>
+              <span class="task-time">Today</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#F59E0B;"></span>
+              <span>KYC verification batch #204</span>
+              <span class="task-time">Tomorrow</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#22C55E;"></span>
+              <span>Monthly Shariah report</span>
+              <span class="task-time">Fri</span>
+            </li>
+          </ul>
+          <a href="#" class="workspace-link">View all tasks <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="workspace-card">
+          <div class="workspace-card-header">
+            <div class="workspace-icon" style="background:#F59E0B20; color:#F59E0B;">
+              <i class="fa-solid fa-file-circle-check"></i>
+            </div>
+            <span class="workspace-badge warning">5 waiting</span>
+          </div>
+          <h3>Pending Approvals</h3>
+          <p>Items awaiting your review and sign-off</p>
+          <ul class="workspace-list">
+            <li>
+              <span class="task-dot" style="background:#F59E0B;"></span>
+              <span>Leave request – Ibrahim K.</span>
+              <span class="task-time">2h</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#F59E0B;"></span>
+              <span>Expense claim – ₦450,000</span>
+              <span class="task-time">5h</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#F59E0B;"></span>
+              <span>New vendor onboarding</span>
+              <span class="task-time">1d</span>
+            </li>
+          </ul>
+          <a href="#" class="workspace-link">Review now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="workspace-card">
+          <div class="workspace-card-header">
+            <div class="workspace-icon" style="background:#8B5CF620; color:#8B5CF6;">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <span class="workspace-badge info">3 today</span>
+          </div>
+          <h3>Today's Schedule</h3>
+          <p>Meetings and events on your calendar</p>
+          <ul class="workspace-list">
+            <li>
+              <span class="task-time" style="color:#8B5CF6; font-weight:700;">09:00</span>
+              <span>Standup – IT Ops</span>
+            </li>
+            <li>
+              <span class="task-time" style="color:#8B5CF6; font-weight:700;">11:30</span>
+              <span>Board review meeting</span>
+            </li>
+            <li>
+              <span class="task-time" style="color:#8B5CF6; font-weight:700;">15:00</span>
+              <span>Shariah compliance training</span>
+            </li>
+          </ul>
+          <a href="#" class="workspace-link">Open calendar <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="workspace-card">
+          <div class="workspace-card-header">
+            <div class="workspace-icon" style="background:#EF444420; color:#EF4444;">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <span class="workspace-badge danger">12 new</span>
+          </div>
+          <h3>Notifications</h3>
+          <p>Recent alerts from across the bank</p>
+          <ul class="workspace-list">
+            <li>
+              <span class="task-dot" style="background:#EF4444;"></span>
+              <span>CBN circular updated</span>
+              <span class="task-time">10m</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#EF4444;"></span>
+              <span>Password expires in 3 days</span>
+              <span class="task-time">1h</span>
+            </li>
+            <li>
+              <span class="task-dot" style="background:#EF4444;"></span>
+              <span>New Shariah policy published</span>
+              <span class="task-time">3h</span>
+            </li>
+          </ul>
+          <a href="#" class="workspace-link">View all <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWS & ANNOUNCEMENTS SECTION ==================== -->
+    <section class="news-section">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">LATEST UPDATES</p>
+          <h2 class="section-title">News &amp; Announcements</h2>
+          <p class="section-subtitle">Stay informed with what's happening across the bank</p>
+        </div>
+        <a href="#" class="btn-secondary-outline">
+          View all news <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card news-featured">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop" alt="Featured News">
+            <span class="news-tag">Announcement</span>
+          </div>
+          <div class="news-body">
+            <p class="news-date"><i class="fa-regular fa-clock"></i> 2 hours ago • By Admin</p>
+            <h3>Jaiz Bank wins "Best Islamic Bank in Nigeria 2026" award</h3>
+            <p class="news-excerpt">We are proud to announce that Jaiz Bank has been recognized at the Global Islamic Finance Awards for excellence in Shariah-compliant banking services...</p>
+            <a href="#" class="news-read-more">Read full story <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <div class="news-sidebar">
+          <article class="news-card news-small">
+            <div class="news-thumb" style="background:#3B82F620; color:#3B82F6;">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="news-small-body">
+              <span class="news-tag-small" style="color:#3B82F6;">Training</span>
+              <h4>Mandatory Cybersecurity Training 2026</h4>
+              <p>All staff must complete by 30 September</p>
+              <span class="news-time">Yesterday</span>
+            </div>
+          </article>
+
+          <article class="news-card news-small">
+            <div class="news-thumb" style="background:#22C55E20; color:#22C55E;">
+              <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <div class="news-small-body">
+              <span class="news-tag-small" style="color:#22C55E;">HR Update</span>
+              <h4>New Employee Wellness Program Launch</h4>
+              <p>Free health checkups and gym access</p>
+              <span class="news-time">2 days ago</span>
+            </div>
+          </article>
+
+          <article class="news-card news-small">
+            <div class="news-thumb" style="background:#F59E0B20; color:#F59E0B;">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="news-small-body">
+              <span class="news-tag-small" style="color:#F59E0B;">IT Notice</span>
+              <h4>Scheduled Maintenance – Core Banking</h4>
+              <p>Finacle will be offline Sunday 2–4 AM</p>
+              <span class="news-time">3 days ago</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODAL: ALL APPLICATIONS ==================== -->
+  <div class="modal-overlay" id="appModal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 id="modalTitle"><i class="fa-solid fa-grip"></i> Application Directory</h2>
+          <p>All internal applications available across Jaiz Bank</p>
+        </div>
+        <button class="modal-close" id="closeModalBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-toolbar">
+        <div class="modal-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="modalSearchInput" placeholder="Search apps by name or category...">
+        </div>
+        <div class="modal-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Core Banking">Core Banking</button>
+          <button class="filter-btn" data-filter="HR &amp; Payroll">HR &amp; Payroll</button>
+          <button class="filter-btn" data-filter="Payments">Payments</button>
+          <button class="filter-btn" data-filter="Reporting">Reporting</button>
+          <button class="filter-btn" data-filter="Operations">Operations</button>
+        </div>
+      </div>
+
+      <div class="modal-body" id="modalAppList"></div>
+
+      <div class="modal-footer">
+        <span id="appCount">0 applications</span>
+        <button class="btn-secondary" id="closeModalBtnFooter">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== EDIT NAVIGATION MODAL ==================== -->
+  <div class="edit-modal-overlay" id="editNavModal" role="dialog" aria-modal="true">
+    <div class="edit-modal-content">
+
+      <div class="edit-modal-header">
+        <div>
+          <h2><i class="fa-solid fa-pen-to-square"></i> Edit Navigation</h2>
+          <p>Customize your top navigation menu — rename, reorder, hide, or add items</p>
+        </div>
+        <button class="edit-modal-close" id="closeEditModal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="edit-modal-toolbar">
+        <div class="edit-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="editNavSearch" placeholder="Search navigation items...">
+        </div>
+        <div class="edit-toolbar-actions">
+          <button class="btn-edit-secondary" id="addNavItemBtn">
+            <i class="fa-solid fa-plus"></i> Add Item
+          </button>
+          <button class="btn-edit-secondary" id="resetNavBtn">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
+      </div>
+
+      <div class="edit-modal-body">
+        <div class="edit-nav-list" id="editNavList"></div>
+      </div>
+
+      <div class="edit-modal-footer">
+        <span class="edit-footer-info" id="editFooterInfo">0 items • Changes auto-save</span>
+        <div class="edit-footer-actions">
+          <button class="btn-edit-secondary" id="cancelEditBtn">Cancel</button>
+          <button class="btn-edit-primary" id="saveEditBtn">
+            <i class="fa-solid fa-check"></i> Save &amp; Close
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING AI BUTTON ==================== -->
+  <button class="ai-float">
+    <i class="fa-solid fa-wand-magic-sparkles"></i>
+    Ask Jaiz AI Assistant
+    <i class="fa-solid fa-xmark close-ai"></i>
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
